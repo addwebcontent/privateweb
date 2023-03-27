@@ -1,0 +1,180 @@
+:root {
+    --bg-m: rgba(17, 20, 20, 1);
+    --span-m: #EFEFEF;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--bg-m);
+    color: var(--span-m);
+}
+
+main {
+    padding-top: 10px; /* replace with the height of your header */
+    box-sizing: border-box;
+  }
+
+.wrapper {
+    max-width: 1920px;
+    /* margin: 20px auto; */
+    display: grid;
+    transform: none;
+    padding-top: 10%;
+}
+.parent {
+    /* max-width: 1200px;
+    margin: 20px auto; */
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 3rem;
+}
+
+@media (min-width: 1124px) {
+    .parent {
+        /* max-width: 1200px;
+        margin: 20px auto; */
+        display: grid;
+        margin: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        padding: 2rem;
+        text-align: left;
+    }
+}
+
+.item {
+    margin: auto;
+    font-size: 1.1rem;
+    display: grid;
+    align-content: center; /*centering using grid*/
+    background-color: var(--bg-m);
+    color: rgba(239, 239, 239, 1);
+    border-left:1px solid var(--span-m);
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 10%;
+    border-left-color: aqua;
+    padding: 20px;
+}
+
+
+#span {
+    font-size: 5.75rem;
+    color: var(--span-m);
+    line-height: 8.625rem;
+    font-weight: 275;
+    opacity: 0.26;
+  
+  }
+
+  #span_two {
+    font-style: normal;
+    line-height: 2.813rem;
+    color: var(--span-m);
+    font-weight: 500;
+    font-size: 1.875rem;
+    padding-inline: 1rem;
+  }
+
+  
+  #span_three {
+    font-style: normal;
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 1.438rem;
+    margin-bottom: 3.125rem;
+    padding-inline: 1rem;
+    color: var(--span-m);
+  }
+
+  .help_css {
+    display: grid;
+    align-content: center; /*centering using grid*/
+
+    font-style: normal;
+    line-height: 4.688rem;
+    color: rgba(255, 153, 33, 1);
+    font-weight: 500;
+    font-size: 3.125rem;
+    padding-inline: 2.2rem;
+  }
+
+
+  /* -------------
+  ---Navbar----
+  ---------- */
+
+  header {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    /* background-color: var(--bg-m); */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    height: 90px; /* replace with the height of your header */
+  }
+  .contact {
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #FF9921;
+  border-radius: 50%;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  transform: rotate(-10.86deg);
+  transform-origin: 50% 50%;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+
+    
+}
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .ellipse{
+    height: 100px;
+    width: 250px;
+    background-color: green;
+
+    /* Setting Border Radius */
+    border-radius: 50%;
+}
+
