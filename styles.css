@@ -1,6 +1,24 @@
 :root {
     --bg-m: rgba(17, 20, 20, 1);
     --span-m: #EFEFEF;
+
+        /* Font sizes */
+        --font-size-xs: 0.8rem;
+        --font-size-sm: 1.2rem;
+        --font-size-md: 1.2rem;
+        --font-size-lg: 1.6rem;
+        --font-size-xl: 2rem;
+        --font-size-xxl: 2.4rem;
+        --font-size-xxxl: 3.2rem;
+      
+        /* Line heights */
+        --line-height-xs: 1;
+        --line-height-sm: 1.2;
+        --line-height-md: 1.4;
+        --line-height-lg: 1.6;
+        --line-height-xl: 1.8;
+        --line-height-xxl: 2;
+        --line-height-xxxl: 2.4;
   }
 
 * {
@@ -17,8 +35,57 @@ body {
 }
 
 main {
-    padding-top: 10px; /* replace with the height of your header */
+    padding-top: 1rem; /* replace with the height of your header */
     box-sizing: border-box;
+  }
+   /* Text styles */
+   h1 {
+    font-size: clamp(var(--font-size-xl), 6vw, var(--font-size-xxxl));
+    line-height: var(--line-height-xl);
+  }
+  
+  h2 {
+    font-size: clamp(var(--font-size-lg), 4vw, var(--font-size-xxl));
+    line-height: var(--line-height-lg);
+  }
+  
+  h3 {
+    font-size: clamp(var(--font-size-md), 3vw, var(--font-size-xl));
+    line-height: var(--line-height-md);
+  }
+  
+  h4 {
+    font-size: clamp(var(--font-size-sm), 2vw, var(--font-size-lg));
+    line-height: var(--line-height-sm);
+  }
+  
+  h5 {
+    font-size: clamp(var(--font-size-xs), 1.5vw, var(--font-size-md));
+    line-height: var(--line-height-xs);
+  }
+  
+  h6 {
+    font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-sm));
+    line-height: var(--line-height-xs);
+  }
+  
+  p {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+    margin-bottom: 1rem;
+  }
+  /* Image styles */
+/* img {
+  max-width: 100%;
+  height: auto;
+  } */
+
+  #contact {
+    font-size: clamp(var(--font-size-md), 2vw, var(--font-size-lg));
+      line-height: var(--line-height-md);
+
+      margin: auto;
+      text-align: center;
   }
 
 .wrapper {
@@ -59,15 +126,14 @@ main {
     background-color: var(--bg-m);
     color: rgba(239, 239, 239, 1);
     border-left:1px solid var(--span-m);
-    border-top-left-radius: 20%;
-    border-bottom-left-radius: 10%;
-    border-left-color: aqua;
+    border-left-color: gray;
     padding: 20px;
 }
 
 
 #span {
-    font-size: 5.75rem;
+    font-size: 2.75rem;
+  font-size: clamp(2.75rem, 2.15rem + 3vw, 5.75rem);
     color: var(--span-m);
     line-height: 8.625rem;
     font-weight: 275;
@@ -80,7 +146,8 @@ main {
     line-height: 2.813rem;
     color: var(--span-m);
     font-weight: 500;
-    font-size: 1.875rem;
+    font-size: 1.2rem;
+font-size: clamp(1.2rem, 1.065rem + 0.675vw, 1.875rem);
     padding-inline: 1rem;
   }
 
@@ -89,7 +156,7 @@ main {
     font-style: normal;
     line-height: 1.2;
     font-weight: 400;
-    font-size: 1.438rem;
+    font-size: clamp(var(--font-size-sm), 2vw, var(--font-size-lg));
     margin-bottom: 3.125rem;
     padding-inline: 1rem;
     color: var(--span-m);
@@ -118,32 +185,39 @@ main {
     left: 0;
     width: 100%;
     /* background-color: var(--bg-m); */
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5); */
     z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 14px 20px;
     height: 90px; /* replace with the height of your header */
+    border: none;
   }
   .contact {
   text-decoration: none;
   color: #fff;
-  background-color: #000;
+  background-color: var(--bg-m);
   border: 2px solid #FF9921;
   border-radius: 50%;
   padding: 10px 20px;
-  font-size: 1.5rem;
+  font-size: clamp(var(--font-size-lg), 5vw, var(--font-size-xxl));
   transform: rotate(-10.86deg);
   transform-origin: 50% 50%;
+  text-align: center;
+  display: grid;
 }
 
 .contact a {
     text-decoration: none;
     color: #fff;
-    background-color: #000;
+    background-color: var(--bg-m);
 
     
+}
+#brand {
+  width: 100%;
+  height: auto;
 }
   
   nav {
@@ -169,12 +243,4 @@ main {
     list-style: none;
   }
 
-  .ellipse{
-    height: 100px;
-    width: 250px;
-    background-color: green;
-
-    /* Setting Border Radius */
-    border-radius: 50%;
-}
 
