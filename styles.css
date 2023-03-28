@@ -29,7 +29,7 @@
 
 body {
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--bg-m);
     color: var(--span-m);
 }
@@ -37,6 +37,12 @@ body {
 main {
     padding-top: 1rem; /* replace with the height of your header */
     box-sizing: border-box;
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 15% 5%;
   }
    /* Text styles */
    h1 {
@@ -93,7 +99,7 @@ main {
     /* margin: 20px auto; */
     display: grid;
     transform: none;
-    padding-top: 10%;
+    padding: 2rem;
 }
 .parent {
     /* max-width: 1200px;
@@ -102,9 +108,37 @@ main {
     margin: auto;
     grid-template-columns: 1fr;
     gap: 30px;
-    padding: 3rem;
 }
 
+#help_center {
+  font-weight: 500;
+  color: rgba(255, 153, 33, 1);
+  font-size: 1.5625rem;
+font-size: clamp(1.5625rem, 1.25rem + 1.5625vw, 3.125rem);
+font-style: normal;
+line-height: 4.688rem;
+}
+
+#hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.hero_heading {
+  font-style: normal;
+font-weight: 500;
+font-size: 295px;
+line-height: 90%;
+font-family: 'Poppins', sans-serif;
+letter-spacing: -0.005em;
+color: #EFEFEF;
+  margin-bottom: 5.75rem;
+}
+
+#hero_sub {
+  text-align: left;
+  align-content: center;
+
+}
 @media (min-width: 1124px) {
     .parent {
         /* max-width: 1200px;
@@ -112,12 +146,11 @@ main {
         display: grid;
         margin: auto;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 30px;
-        padding: 2rem;
+        gap: 10px;
+        
         text-align: left;
     }
 }
-
 .item {
     margin: auto;
     font-size: 1.1rem;
@@ -128,7 +161,9 @@ main {
     border-left:1px solid var(--span-m);
     border-left-color: gray;
     padding: 20px;
+ 
 }
+
 
 
 #span {
@@ -162,17 +197,7 @@ font-size: clamp(1.2rem, 1.065rem + 0.675vw, 1.875rem);
     color: var(--span-m);
   }
 
-  .help_css {
-    display: grid;
-    align-content: center; /*centering using grid*/
 
-    font-style: normal;
-    line-height: 4.688rem;
-    color: rgba(255, 153, 33, 1);
-    font-weight: 500;
-    font-size: 3.125rem;
-    padding-inline: 2.2rem;
-  }
 
 
   /* -------------
